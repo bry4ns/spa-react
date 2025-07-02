@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-//useState: permite guardar y actualizar valores que cambian (como el formulario o la lista de elementos).
-
-//useEffect: ejecuta acciones cuando el componente se monta o cuando cambian ciertos datos (en este caso, para cargar y guardar en localStorage).
+// useState: permite guardar y actualizar valores que cambian (como el formulario o la lista de elementos).
+// useEffect: ejecuta acciones cuando el componente se monta o cuando cambian ciertos datos (en este caso, para cargar y guardar en localStorage).
 
 function Extra() {
+  // Estado para la lista de notas
   const [items, setItems] = useState([]);
+  // Estado para el formulario de nota
   const [form, setForm] = useState({ titulo: '', descripcion: '' });
+  // Estado para saber si se está editando
   const [modoEdicion, setModoEdicion] = useState(false);
+  // Índice del elemento que se está editando
   const [editIndex, setEditIndex] = useState(null);
 
   // Cargar datos desde localStorage al iniciar
@@ -21,11 +24,13 @@ function Extra() {
     localStorage.setItem('extraItems', JSON.stringify(items));
   }, [items]);
 
+  // Maneja cambios en los campos del formulario
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  // Maneja el envío del formulario para agregar o editar
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.titulo.trim() || !form.descripcion.trim()) return;
@@ -43,12 +48,14 @@ function Extra() {
     setForm({ titulo: '', descripcion: '' });
   };
 
+  // Activa el modo edición y carga los datos en el formulario
   const handleEdit = (index) => {
     setModoEdicion(true);
     setEditIndex(index);
     setForm(items[index]);
   };
 
+  // Elimina una nota de la lista
   const handleDelete = (index) => {
     const confirm = window.confirm('¿Estás seguro de eliminar este elemento?');
     if (!confirm) return;
@@ -56,6 +63,7 @@ function Extra() {
     setItems(nuevosItems);
   };
 
+  // Renderiza el formulario y la lista de notas
   return (
     <section id="Extra" className="seccion">
       <div className="tarjeta bg-black bg-gradient">
@@ -89,10 +97,12 @@ function Extra() {
 
       <div className="tarjeta bg-black bg-gradient">
         <h2>Notas</h2>
+        {/* Si no hay notas, muestra un mensaje */}
         {items.length === 0 ? (
           <p>No hay notas aún.</p>
         ) : (
           <ul>
+            {/* Muestra cada nota con botones para editar y eliminar */}
             {items.map((item, index) => (
               <li key={index} style={{ marginBottom: '15px' }}>
                 <strong>{item.titulo}</strong><br />
