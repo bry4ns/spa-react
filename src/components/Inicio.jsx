@@ -2,6 +2,7 @@ import React from 'react';
 import imagen1 from './images/aaa.webp'
 import imagen2 from './images/bbb.jpg'
 import imagen3 from './images/ccc.jpg'
+import Button from './Boton';
 
 function Inicio({ setSeccionActiva }) {
   return (
@@ -9,9 +10,9 @@ function Inicio({ setSeccionActiva }) {
       <div className="tarjeta bg-black bg-gradient">
         <h1>Bienvenido a ServiciosJG</h1>
         <p>Servicio técnico con más de 10 años de experiencia.</p>
-        <a  className="boton" onClick={() => setSeccionActiva('contacto')}>
-          Contáctanos
-        </a>
+        <div onClick={() => setSeccionActiva('contacto')}>
+          <Button />
+        </div>
       </div>
 
       <div className="tarjetas-fotos ">
