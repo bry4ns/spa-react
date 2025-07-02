@@ -1,0 +1,189 @@
+/* base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+}
+
+.mi-fondo {
+    background-image: url(/public/wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+/* letra y fondo*/
+body {
+    font-family: sans-serif;
+    background-color: #141414;
+    color: #f0f0f0;
+    line-height: 1.5;
+}
+
+/* Colores de texto */
+h1, h2, h3, p, li, ul {
+    color: #f0f0f0;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #14143c;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu a.activo {
+    font-weight: bold;
+    color: #00bfff;
+}
+
+
+
+/* tarjetas */
+.tarjeta {
+    background-color: #1e1e2e;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: #141414;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+    background-color: #83ad3f;
+}
+
+/* Formulario */
+.formulario {
+    background-color: #1e1e2e;
+    padding: 20px;
+    border: 1px solid #2c2c2c;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f0f0f0;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 8px;
+    background-color: #2a2a3c;
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 8px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #00bfff;
+}
+
+.checkbox {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* fotos */
+.tarjetas-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tarjetas-fotos .tarjeta {
+    width: 280px;
+    text-align: center;
+    background-color: #1e1e2e;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.tarjetas-fotos img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+}
