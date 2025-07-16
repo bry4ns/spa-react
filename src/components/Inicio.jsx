@@ -25,7 +25,7 @@ function Inicio({ setSeccionActiva }) {
           <p>Protección integral ante amenazas digitales para empresas y pymes.</p>
         </div>
         <div className="tarjeta bg-transparent bg-info bg-gradient">
-          <img src={imagen1} alt="Mantenimiento" style={{ width: '100%', maxWidth: '300px' }} />
+          <img src={imagen2} alt="Mantenimiento" style={{ width: '100%', maxWidth: '300px' }} />
           <p>Auditoría, diagnóstico y mantenimiento de infraestructura tecnológica.</p>
         </div>
       </div>

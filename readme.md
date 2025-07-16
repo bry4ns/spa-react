@@ -1,84 +1,79 @@
-﻿# Proyecto React: Servicios Técnicos
+﻿# Proyecto React: Servicios de Seguridad Informática
 
-Este proyecto es una SPA (Single Page Application) creada con React que simula una página web de servicios técnicos, como reparaciones, mantenimientos y soporte. Está dividida en múltiples secciones: Inicio, Nosotros, Servicios, Contacto y Extra. Utiliza componentes reutilizables y un diseño limpio con estilos CSS y bootstrap.
+Este proyecto es una SPA (Single Page Application) creada con React que simula una página web dedicada a ofrecer **servicios de seguridad informática**, como análisis de vulnerabilidades, pruebas de penetración, asesorías y soluciones especializadas. 
+
+Está dividida en múltiples secciones: Inicio, Nosotros, Servicios, Contacto, Extra y un nuevo componente de **Noticias** que se conecta a una API local.
+
+Utiliza componentes reutilizables, React Hooks (`useState`, `useEffect`) y un diseño visual con CSS y Bootstrap.
 
 ---
 
-## 🌐 Test WEB
+## 🌐 Test WEB  
 https://perserver.netlify.app/
+
+---
 
 ## 🧩 Estructura de Componentes
 
 ### 🔹 Navbar (`Navbar.js`)
-- Barra de navegación fija que permite cambiar de sección sin recargar.
+- Barra de navegación fija para cambiar de sección sin recargar.
 - Controla la sección activa mediante `useState`.
-- Utiliza botones `<li>` que cambian dinámicamente el DOM con React.
 
 ---
 
 ### 🔹 Inicio (`Inicio.js`)
-- Página principal con un mensaje de bienvenida.
-- Muestra tarjetas con imágenes y descripciones de los servicios.
-- No contiene lógica, solo presentación.
+- Página principal con mensaje de bienvenida.
+- Tarjetas con imágenes y descripción de servicios de ciberseguridad.
 
 ---
 
 ### 🔹 Nosotros (`Nosotros.js`)
-- Componente estático que explica la misión, visión y valores de la empresa.
-- Contiene una lista con íconos representativos y párrafos explicativos.
+- Presenta la misión, visión y valores de la empresa.
+- Uso de íconos e información estática.
 
 ---
 
 ### 🔹 Servicios (`Servicios.js`)
-- Lista de servicios disponibles (reparaciones, mantenimiento, etc).
-- Presentación simple dentro de una tarjeta.
+- Lista de servicios ofrecidos como:
+  - Análisis de vulnerabilidades
+  - Pentesting
+  - Auditorías
+  - Asesoría normativa
 
 ---
 
 ### 🔹 Contacto (`Contacto.js`)
-- Formulario funcional controlado con `useState`.
-- Validación en el cliente (React) para todos los campos requeridos.
-- Controles tipo checkbox, select, date, input.
-- Muestra errores personalizados debajo de cada campo.
-- Al enviarse, muestra un mensaje y guarda los datos en consola.
-
-#### Estados utilizados:
-- `form`: para manejar los datos del formulario.
-- `errores`: para mostrar validaciones en pantalla.
-
-#### Lógica clave:
-- `handleChange`: actualiza el formulario.
-- `handleSubmit`: valida y procesa los datos.
+- Formulario funcional con validación en cliente.
+- Uso de checkbox, select, date y otros inputs.
+- Guarda los datos en consola al enviar.
 
 ---
 
-###  Extra (`Extra.js`)
-- Sistema de **CRUD** (Crear, Leer, Actualizar, Eliminar) de notas o tareas.
+### 🔹 Extra (`Extra.js`)
+- Sistema CRUD para tareas o notas.
 - Utiliza `localStorage` para persistencia de datos.
-- Se puede editar o eliminar cualquier elemento.
-
-#### Estados utilizados:
-- `items`: lista de elementos.
-- `form`: campos del formulario.
-- `modoEdicion` y `editIndex`: controlan la edición.
 
 ---
 
-##  Hooks utilizados
+### 🔹 Noticias (`Noticias.jsx`)
+- Componente dinámico que se conecta a una API REST simulada en `http://localhost:5000/api/noticias`.
+- Carga y muestra noticias sobre vulnerabilidades con detalles como título, descripción, severidad y fecha.
 
-- `useState`: manejar formularios, secciones activas y CRUD.
-- `useEffect`: cargar y guardar datos en localStorage.
+#### Funcionalidades:
+- Fetch a la API usando `useEffect`.
+- Manejo de estado con `useState`.
+- Renderizado de tarjetas con datos dinámicos.
+- Manejo de errores de red con `.catch()`.
 
----
-
-## 📁 Archivos importantes
-
-- `App.js`: contiene la estructura principal y renderiza las secciones.
-- `Navbar.js`: navegación.
-- `Contacto.js`, `Extra.js`, `Nosotros.js`, `Servicios.js`, `Inicio.js`: cada sección.
-- `style.css`: estilos globales.
-- `informe_extra.md`: informe detallado del componente 
-
-
-##
-agradecimiento a uiverse.io por ahorrarme como 10 horas de diseño 
+#### Estructura esperada desde la API:
+```json
+[
+  {
+    "id": 1,
+    "titulo": "Vulnerabilidad crítica en Apache",
+    "descripcion": "Se detectó una vulnerabilidad crítica que permite ejecución remota de código.",
+    "severidad": "Alta",
+    "fecha": "2025-07-14",
+    "imagen": "https://ejemplo.com/imagen.jpg"
+  }
+]
