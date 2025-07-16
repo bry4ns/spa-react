@@ -1,7 +1,7 @@
 import React from 'react';
-import imagen1 from './images/aaa.webp'
-import imagen2 from './images/bbb.jpg'
-import imagen3 from './images/ccc.jpg'
+import imagen1 from './images/aaa.png'
+import imagen2 from './images/bbb.png'
+import imagen3 from './images/ccc.png'
 import Button from './Boton';
 
 function Inicio({ setSeccionActiva }) {
@@ -21,11 +21,11 @@ function Inicio({ setSeccionActiva }) {
           <p>Asesoría estratégica en ciberseguridad y buenas prácticas digitales.</p>
         </div>
         <div className="tarjeta bg-transparent bg-info bg-gradient">
-          <img src={imagen2} alt="Seguridad" style={{ width: '100%', maxWidth: '300px' }} />
+          <img src={imagen3} alt="Seguridad" style={{ width: '100%', maxWidth: '300px' }} />
           <p>Protección integral ante amenazas digitales para empresas y pymes.</p>
         </div>
         <div className="tarjeta bg-transparent bg-info bg-gradient">
-          <img src={imagen3} alt="Mantenimiento" style={{ width: '100%', maxWidth: '300px' }} />
+          <img src={imagen1} alt="Mantenimiento" style={{ width: '100%', maxWidth: '300px' }} />
           <p>Auditoría, diagnóstico y mantenimiento de infraestructura tecnológica.</p>
         </div>
       </div>
