@@ -14,6 +14,7 @@ import Contacto from './components/Contacto';
 import Extra from './components/Extra';
 // Importa el componente del pie de página
 import Bajo from './components/Bajo';
+import Noticias from './components/Noticias';  
 // Importa los estilos globales
 import './styles.css'
 
@@ -38,6 +39,7 @@ function App() {
         {seccionActiva === 'servicios' && <Servicios />}
         {seccionActiva === 'contacto' && <Contacto />}
         {seccionActiva === 'Extra' && <Extra />}
+        {seccionActiva === 'noticias' && <Noticias />}
       </main>
 
       {/* Pie de página */}

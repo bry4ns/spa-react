@@ -5,18 +5,19 @@ function Nosotros() {
     <section id="nosotros" className="seccion">
       <div className="tarjeta bg-transparent">
         <h2>¿Quiénes somos?</h2>
-        <p>Equipo de técnicos certificados con atención a domicilio y soporte remoto.</p>
+        <p>Somos una empresa especializada en seguridad informática, enfocada en proteger a pymes y empresas frente a amenazas digitales.</p>
         <br />
         <ul>
-          <li>🔧 Reparamos, mantenemos y optimizamos equipos tecnológicos con profesionalismo y responsabilidad.</li>
-          <li>🏡 Somos una empresa local que entiende las necesidades de la comunidad y busca entregar un servicio técnico accesible y confiable.</li>
-          <li>💡 Queremos ser tu primera opción cuando se trata de resolver problemas técnicos, destacándonos por la rapidez y la calidad.</li>
-          <li>👨‍💻 Más que reparar equipos, buscamos darte tranquilidad, con atención dedicada y un trato respetuoso y amable.</li>
-          <li>🌐 Nos mantenemos actualizados con las últimas tecnologías para ofrecerte soluciones modernas y eficientes.</li>
+          <li>🛡️ Diseñamos, implementamos y gestionamos soluciones de ciberseguridad adaptadas a las necesidades de cada cliente.</li>
+          <li>🏢 Entendemos los desafíos tecnológicos de las pequeñas y medianas empresas, brindando soporte cercano, personalizado y profesional.</li>
+          <li>⚡ Nos destacamos por la rapidez de respuesta ante incidentes, minimizando riesgos y tiempos de inactividad.</li>
+          <li>👨‍💼 Nuestro equipo está compuesto por expertos certificados en seguridad informática, comprometidos con la confidencialidad y la protección de tus datos.</li>
+          <li>🔍 Estamos en constante actualización para anticipar y prevenir ataques con tecnología de última generación.</li>
         </ul>
       </div>
     </section>
   );
 }
+
 
 export default Nosotros;

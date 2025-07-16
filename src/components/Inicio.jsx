@@ -6,27 +6,27 @@ import Button from './Boton';
 
 function Inicio({ setSeccionActiva }) {
   return (
-    <section className="seccion activa " id="inicio">
+    <section className="seccion activa" id="inicio">
       <div className="tarjeta bg-black bg-gradient">
-        <h1>Bienvenido a ServiciosJG</h1>
-        <p>Servicio técnico con más de 10 años de experiencia.</p>
+        <h1>Bienvenido a SeguridadJG</h1>
+        <p>Protegiendo la información y la infraestructura de pymes y empresas desde hace más de 10 años.</p>
         <div onClick={() => setSeccionActiva('contacto')}>
           <Button />
         </div>
       </div>
 
-      <div className="tarjetas-fotos ">
+      <div className="tarjetas-fotos">
         <div className="tarjeta bg-transparent bg-black bg-gradient">
-          <img src={imagen1} alt="Ejemplo 1" style={{ width: '100%', maxWidth: '300px' }} />
-          <p>Reparación de notebooks y PCs.</p>
+          <img src={imagen1} alt="Mentoría" style={{ width: '100%', maxWidth: '300px' }} />
+          <p>Asesoría estratégica en ciberseguridad y buenas prácticas digitales.</p>
         </div>
         <div className="tarjeta bg-transparent bg-info bg-gradient">
-          <img src={imagen2} alt="Ejemplo 2" style={{ width: '100%', maxWidth: '300px' }} />
-          <p>Instalación y mantenimiento de racks</p>
+          <img src={imagen2} alt="Seguridad" style={{ width: '100%', maxWidth: '300px' }} />
+          <p>Protección integral ante amenazas digitales para empresas y pymes.</p>
         </div>
         <div className="tarjeta bg-transparent bg-info bg-gradient">
-          <img src={imagen3} alt="Ejemplo 3" style={{ width: '100%', maxWidth: '300px' }} />
-          <p>Diagnóstico y Mantenimiento</p>
+          <img src={imagen3} alt="Mantenimiento" style={{ width: '100%', maxWidth: '300px' }} />
+          <p>Auditoría, diagnóstico y mantenimiento de infraestructura tecnológica.</p>
         </div>
       </div>
     </section>
@@ -34,3 +34,4 @@ function Inicio({ setSeccionActiva }) {
 }
 
 export default Inicio;
+

@@ -1,7 +1,8 @@
 import React from 'react';
+import NoticiasCSIRT from './Noticias';
 
 function Navbar({ setSeccionActiva, seccionActiva }) {
-  const items = ['inicio', 'nosotros', 'servicios', 'contacto', 'Extra'];
+  const items = ['inicio', 'nosotros', 'servicios', 'contacto', 'Extra', 'noticias'];
 
   return (
     <nav className="contenedor">
